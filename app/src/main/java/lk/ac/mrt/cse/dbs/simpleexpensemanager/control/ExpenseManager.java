@@ -76,6 +76,7 @@ public abstract class ExpenseManager implements Serializable {
      * @return
      */
     public List<Transaction> getTransactionLogs() {
+
         return transactionsHolder.getPaginatedTransactionLogs(10);
     }
 
@@ -124,7 +125,7 @@ public abstract class ExpenseManager implements Serializable {
      *
      * @param transactionDAO
      */
-    public void setTransactionsDAO(TransactionDAO transactionDAO) {
+    public void setTransactionsDAO(TransactionDAO transactionDAO){
         this.transactionsHolder = transactionDAO;
     }
 

@@ -16,6 +16,7 @@
 
 package lk.ac.mrt.cse.dbs.simpleexpensemanager.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,6 +27,7 @@ import android.widget.EditText;
 
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.R;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.ExpenseManager;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.database.dbHandler;
 
 import static lk.ac.mrt.cse.dbs.simpleexpensemanager.Constants.EXPENSE_MANAGER;
 /**
@@ -57,6 +59,8 @@ public class AddAccountFragment extends Fragment implements View.OnClickListener
         bankName = (EditText) rootView.findViewById(R.id.bank_name);
         accountHolderName = (EditText) rootView.findViewById(R.id.account_holder_name);
         initialBalance = (EditText) rootView.findViewById(R.id.initial_balance);
+
+
         addAccount = (Button) rootView.findViewById(R.id.add_account);
         addAccount.setOnClickListener(this);
 
